@@ -11,9 +11,9 @@
     <title>sort quiz</title>
   </head>
   <body>
-    <div class="container text-center p-5">
+    <div class="container p-5 text-center">
         <h1>ソートクイズ</h1>
-        <form class="row p-4">
+        <form class="row p-4" id="form1">
             <div class="col-8">
                 <input id="input-text" class="form-control" name="text" type="text" placeholder="元の文字列"/>
             </div>
@@ -25,6 +25,16 @@
     </div>
 
     <script>
+
+        document.getElementById("form1").onkeypress = (e) => {
+            // form1に入力されたキーを取得
+            const key = e.keyCode || e.charCode || 0;
+            // 13はEnterキーのキーコード
+            if (key == 13) {
+            // アクションを行わない
+            e.preventDefault();
+            }
+        }
 
         function buttonClick() {
             const textbox = document.getElementById('input-text');
