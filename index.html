@@ -11,17 +11,19 @@
     <title>sort quiz</title>
   </head>
   <body>
-    <div class="container p-5 text-center">
+    <div class="box">
         <h1>ソートクイズ</h1>
-        <form class="row p-4" id="form1">
-            <div class="col-8">
-                <input id="input-text" class="form-control" name="text" type="text" placeholder="元の文字列"/>
+        <div class="box-item">
+        <form class="row pt-2" id="form1">
+            <div class="col-auto" style="width: 400px;">
+                <input id="input-text" class="form-control" name="text" type="search" placeholder="元の文字列"/>
             </div>
             <div class="col-auto">
                 <input class="btn btn-primary" type="button" id="submitbutton" value="送信" onclick="buttonClick();"/>
             </div>
         </form>
         <h2 id="result"></h2>
+        </div>
     </div>
 
     <script>
